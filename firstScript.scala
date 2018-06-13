@@ -1,7 +1,5 @@
-def isPrime2(num: Int): Boolean={
-  for(n <- Range(2,num)){
-    if(num%n==0)
-    return false
-  }
-  return true
-}
+import org.apache.spark.sql.SparkSession
+
+//create or get an existing spark session
+//application name and number of cores to use can also be declared.
+val ss = SparkSession.builder().getOrCreate() 
